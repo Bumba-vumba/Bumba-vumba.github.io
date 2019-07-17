@@ -1,0 +1,46 @@
+body{
+
+background-color: #469FBC;
+
+}
+#str1{
+	color:#FFFFFF;
+}
+#str2{
+	color:#F2CB76;
+}
+#str3{
+	color:#75D87D;
+}
+#str4{
+	color:#285E6F;
+}
+.tab{
+	border-radius: 4px;
+	border-width: 2px;
+	border-color: #438999;
+}
+.tex{
+	margin-left: 50px;
+}
+
+#id1{
+	background-color: #6AB7CA ;
+	border:2px solid #275D6E;
+	color:white;
+	border-radius: 5px;
+	margin: 15px;
+	height: 15px;
+	margin-left:350px;
+	margin-right: 350px;
+	padding: 5px;
+}
+#kk{
+	width:300px;
+	border-radius:5px;
+	color:#7E8890;
+	font-weight: bold;
+}
+ul{
+	list-style-type: none;
+}
