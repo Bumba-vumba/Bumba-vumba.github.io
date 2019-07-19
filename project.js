@@ -17,10 +17,5 @@ function CreateElement()
 	butt.setAttribute('onclick', 'Delete()');
 	butt.setAttribute('align', 'center');
 	document.body.appendChild(butt);
-}
-
-document.getElementById('kk').onkeypress = function Enterpush()
-{
-	if (event.keyCode == 13) CreateElement()
-   
+	
 }
