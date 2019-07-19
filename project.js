@@ -1,5 +1,6 @@
 var p;
 var butt;
+var list = [];
 function Delete()
 { 
   p.parentNode.removeChild(p);
@@ -7,7 +8,8 @@ function Delete()
 
 }
 function CreateElement()
-{   p = document.createElement('p');
+{   
+	p = document.createElement('p');
     butt = document.createElement('button');
     p.innerHTML = document.getElementById('kk').value;
 	document.body.appendChild(p);
@@ -17,6 +19,7 @@ function CreateElement()
 	butt.setAttribute('onclick', 'Delete()');
 	butt.setAttribute('align', 'center');
 	document.body.appendChild(butt);
+	list.push(butt, p);
 }
 
 document.getElementById('kk').onkeypress = function Enterpush()
