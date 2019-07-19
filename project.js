@@ -1,5 +1,6 @@
 var p;
 var butt;
+
 function Delete()
 { 
   p.parentNode.removeChild(p);
@@ -18,4 +19,9 @@ function CreateElement()
 	butt.setAttribute('align', 'center');
 	document.body.appendChild(butt);
 	
+}
+
+document.getElementById('kk').onkeypress = function Enterpush()
+{
+	if (event.keyCode == 13) CreateElement()
 }
