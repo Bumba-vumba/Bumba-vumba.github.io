@@ -1,5 +1,6 @@
 var p;
 var butt;
+var list=[];
 
 function Delete()
 { 
@@ -18,10 +19,10 @@ function CreateElement()
 	butt.setAttribute('onclick', 'Delete()');
 	butt.setAttribute('align', 'center');
 	document.body.appendChild(butt);
-	
+	list.push(p,butt);
 }
 
-document.getElementById('kk').onkeypress = function Enterpush()
+document.getElementById('kk').onkeypress = function()
 {
-	if (event.keyCode == 13) CreateElement()
+	if (event.keyCode === 13) CreateElement()
 }
