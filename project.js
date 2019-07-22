@@ -1,5 +1,7 @@
 var p;
 var butt;
+var list=[];
+
 function Delete()
 { 
   p.parentNode.removeChild(p);
@@ -17,5 +19,10 @@ function CreateElement()
 	butt.setAttribute('onclick', 'Delete()');
 	butt.setAttribute('align', 'center');
 	document.body.appendChild(butt);
-	
+	list.push(p,butt);
+}
+
+document.getElementById('kk').onkeypress = function()
+{
+	if (event.keyCode === 13) CreateElement()
 }
