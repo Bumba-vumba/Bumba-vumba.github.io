@@ -1,31 +1,35 @@
-var p;
-var butt;
-var item=[];
-var item2=[];
-var list = new Array(item, item2);
+var inp = document.getElementById('inp');
+var butt = document.getElementById('but');
+var list = document.getElementById('container');
 
-function Draw()
+function CreateNewElement(inf)
 {	
-	var div = document.getElementById('items');
-	div.innerHTML = '';   
-	p = document.createElement('p');
-    butt = document.createElement('button');
-    butt.innerHTML = 'x';
-    butt.setAttribute('onclick', 'Delete()');                          
-	p.innerHTML = document.getElementById('kk').value;
-	item2.push(p.innerHTML); 
- 	item.push(butt.innerHTML);
- 	document.body.appendChild(butt);
- 	document.body.appendChild(p);                               
-	
+	var listItem = document.createElement('li');
+	var del = document.createElement('button');
+	var text = document.createElement('label');
+	text.innerText = inf;
+	del.setAttribute('onclick', 'Delete()');
+	del.innerHTML = "x";
+	listItem.appendChild(text);
+	listItem.appendChild(del);
+	list.appendChild(listItem);
+     
 }
-function Delete()
+function Delete(listItem)
 { 
-  
+ 
 }
 
-document.getElementById('kk').onkeypress = function ()
+function addNewElement(){
+	if (inp.value)
+		CreateNewElement(inp.value);
+
+}
+
+
+
+document.getElementById('inp').onkeypress = function ()
 {
-	if (event.keyCode === 13) CreateElement()
+	if (event.keyCode === 13) addNewElement ()
    
 }
