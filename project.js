@@ -18,6 +18,7 @@ function CreateNewElement(inf)
 function Delete(listItem)
 { 
  
+
 }
 
 function addNewElement(){
