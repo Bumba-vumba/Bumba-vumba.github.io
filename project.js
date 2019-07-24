@@ -1,28 +1,37 @@
-var p;
-var butt;
-var list=[];
 
+var arr =[];
+
+
+function CreateNewElement()
+{	
+	var butt = document.createElement('button');
+	var text = document.createElement('p');
+	text.innerHTML = document.getElementById('inp').value;
+	butt.setAttribute('onclick', 'Delete()');
+	butt.innerHTML = "x";
+	arr.push(text);
+	arr.push(butt);
+    Draw();
+}
 function Delete()
 { 
-  p.parentNode.removeChild(p);
-  butt.parentNode.removeChild(butt);
+ 
 
 }
-function CreateElement()
-{   p = document.createElement('p');
-    butt = document.createElement('button');
-    p.innerHTML = document.getElementById('kk').value;
-	document.body.appendChild(p);
-	p.setAttribute("id", 'id1');
-	p.setAttribute('align', 'center');
-    butt.innerHTML = 'x';
-	butt.setAttribute('onclick', 'Delete()');
-	butt.setAttribute('align', 'center');
-	document.body.appendChild(butt);
-	list.push(p,butt);
+
+function Draw(){
+	var list = document.getElementById('container');
+	list.innerHTML = "";
+ 	for (var i = 0; i<arr.length; i++){
+    list.appendChild(arr[i]);
+ }
+
 }
 
-document.getElementById('kk').onkeypress = function()
+
+
+document.getElementById('inp').onkeypress = function ()
 {
-	if (event.keyCode === 13) CreateElement()
+	if (event.keyCode === 13) CreateNewElement();
+   
 }
